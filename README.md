@@ -43,7 +43,7 @@ The group who attended the hackathon:
 - Carlo Cavallieri
 - Leonardo Mattioli
 
-We are employees of [CASTGroup](https://cast.sys-datgroup.com/) a company of the Sys-dat group with 250 employees and 16 between branches and group companies throughout Italy. We are located in Modena, in the heart of Motor Valley, and since 1988 we do customized software.
+We are employees of [CAST](https://cast.sys-datgroup.com/) a company of the Sys-dat group with 250 employees and 16 between branches and group companies throughout Italy. We are located in Modena, in the heart of Motor Valley, and since 1988 we do customized software.
 
 We started working with Alfresco in 2010, with version 3.2.
 
