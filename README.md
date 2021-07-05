@@ -33,3 +33,21 @@ For Category management we found nothing and you can't save them with the [class
 So we have developed a Webscript that need to be copied in the Data Dictionary\Webscript folder and an Angular component to use it.
 
 You can find the folder "update-categories" in the [_cast](https://github.com/CASTGroup/Alfresco-Tags-and-Categories/tree/main/_cast) directory.
+
+## Who we are
+
+The group who attended the hackathon:
+
+- Jessica Foroni
+- Matteo Battisti
+- Carlo Cavallieri
+- Leonardo Mattioli
+
+We are employees of [CASTGroup](https://cast.sys-datgroup.com/) a company of the Sys-dat group with 250 employees and 16 branches throughout Italy. We are located in Modena, in the heart of Motor Valley, and since 1987 we do customized software.
+
+We started working with Alfresco in 2010, with version 3.2.
+
+Many thanks to Eddie May and Axel Faust for the organization of the event.
+
+
+
