@@ -15,7 +15,7 @@ In the [Alfresco Ng2 Components](https://github.com/Alfresco/alfresco-ng2-compon
 - adf-tag-node-list directly in the files.component.html of ACA
 - adf-tag-node-actions-list in the metadata tab
 
-The ACA Metadata tab didn't permit an easy way to insert the selector for tag and, later, for categories, so we made a custom metadata tab called my-matadata-tab. To substitute the standard metadata tab we use the ExtensionService (see the [code here](https://github.com/CASTGroup/Alfresco-Hackathon-2021/blob/main/src/app/modules/castgroup/castgroup.module.ts#L85))
+The ACA Metadata tab didn't permit an easy way to insert the selector for tag and, later, for categories, so we made a custom metadata tab called my-matadata-tab. To substitute the standard metadata tab we use the ExtensionService (see the [code here](https://github.com/CASTGroup/Alfresco-Tags-and-Categories/blob/main/src/app/modules/castgroup/castgroup.module.ts#L85))
 
 `this.extensions.setComponents({
     'app.components.tabs.metadata': MyMetadataTabComponent
@@ -23,13 +23,13 @@ The ACA Metadata tab didn't permit an easy way to insert the selector for tag an
 
 ## My metadata tab component
 
-We started from ACA code and we added the Tag and Category selectors only if the node selected is a [Folder](https://github.com/CASTGroup/Alfresco-Hackathon-2021/blob/main/src/app/modules/castgroup/my-metadata-tab/my-metadata-tab.component.html#L23), to avoid duplication between the various panel properties
+We started from ACA code and we added the Tag and Category selectors only if the node selected is a [Folder](https://github.com/CASTGroup/Alfresco-Tags-and-Categories/blob/main/src/app/modules/castgroup/my-metadata-tab/my-metadata-tab.component.html#L23), to avoid duplication between the various panel properties
 
-The component during ngOnInit dispatch an Action to load all the [repository Categories](https://github.com/CASTGroup/Alfresco-Hackathon-2021/blob/main/src/app/modules/castgroup/my-metadata-tab/my-metadata-tab.component.ts#L144) and store them in the [Store](https://github.com/CASTGroup/Alfresco-Hackathon-2021/blob/main/src/app/modules/castgroup/store/category.effects.ts#L42)
+The component during ngOnInit dispatch an Action to load all the [repository Categories](https://github.com/CASTGroup/Alfresco-Tags-and-Categories/blob/main/src/app/modules/castgroup/my-metadata-tab/my-metadata-tab.component.ts#L144) and store them in the [Store](https://github.com/CASTGroup/Alfresco-Tags-and-Categories/blob/main/src/app/modules/castgroup/store/category.effects.ts#L42)
 
 ## Category management
 
 For Category management we found nothing and you can't save them with the [classic PUT to update the node](https://api-explorer.alfresco.com/api-explorer/#/nodes/updateNode) because, if you read the documentation, "**Note**: setting properties of type d:content and d:category are not supported".
 So we have developed a Webscript that need to be copied in the Data Dictionary\Webscript folder and an Angular component to use it.
 
-You can find the folder "update-categories" in the [_cast](https://github.com/CASTGroup/Alfresco-Hackathon-2021/tree/main/_cast) directory.
+You can find the folder "update-categories" in the [_cast](https://github.com/CASTGroup/Alfresco-Tags-and-Categories/tree/main/_cast) directory.
