@@ -48,6 +48,3 @@ We are employees of [CASTGroup](https://cast.sys-datgroup.com/) a company of the
 We started working with Alfresco in 2010, with version 3.2.
 
 Many thanks to Eddie May and Axel Faust for the organization of the event.
-
-
-
