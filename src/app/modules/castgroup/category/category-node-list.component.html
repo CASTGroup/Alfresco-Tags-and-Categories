@@ -1,0 +1,16 @@
+<mat-chip-list>
+  <mat-chip
+    class="adf-tag-chips adf-primary-background-color"
+    *ngFor="let currentEntry of nodeCategories"
+    (removed)="removeCategory(currentEntry.id)"
+  >
+    <span id="tag_name_{{ currentEntry.id }}">{{ currentEntry.label }}</span>
+    <mat-icon
+      *ngIf="showDelete"
+      id="tag_chips_delete_{{ currentEntry.id }}"
+      class="cast-category-chips-delete-icon adf-primary-contrast-text-color"
+      matChipRemove
+      >cancel
+    </mat-icon>
+  </mat-chip>
+</mat-chip-list>

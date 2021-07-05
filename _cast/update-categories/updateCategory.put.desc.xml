@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Update Category for Node</shortname>
+  <description>Aggiorna le categorie di un nodo</description>
+  <url>/updateCategories</url>
+  <format default="json"></format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

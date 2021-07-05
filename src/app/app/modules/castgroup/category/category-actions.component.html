@@ -1,0 +1,23 @@
+<div class="adf-property-field">
+  <mat-form-field class="cast-full-width">
+    <mat-chip-list #chipList aria-label="Selection">
+      <mat-chip *ngFor="let value of nodeCategories" [selectable]="true" [removable]="true" (removed)="removeCategory(value.id)">
+        {{ value.label }}
+        <mat-icon matChipRemove>cancel</mat-icon>
+      </mat-chip>
+      <input
+        placeholder="Select one"
+        #chipInput
+        [formControl]="chipCtrl"
+        [matAutocomplete]="auto"
+        [matChipInputFor]="chipList"
+        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+      />
+    </mat-chip-list>
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+      <mat-option *ngFor="let option of filteredChips" [value]="option.id">
+        {{ option.label }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</div>

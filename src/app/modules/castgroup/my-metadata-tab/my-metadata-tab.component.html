@@ -1,0 +1,29 @@
+<ng-container *ngIf="groupedProperties$ | async; let groupedProperties">
+  <div *ngFor="let group of groupedProperties; let first = first;"
+       class="adf-metadata-grouped-properties-container">
+      <mat-expansion-panel *ngIf="showGroup(group) || editable"
+                           [attr.data-automation-id]="'adf-metadata-group-' + group.title"
+                           [expanded]="canExpandTheCard(group) || !displayDefaultProperties && first">
+          <mat-expansion-panel-header>
+              <mat-panel-title>
+                  {{ group.title | translate }}
+              </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <adf-card-view
+              (keydown)="keyDown($event)"
+              [properties]="group.properties"
+              [editable]="editable"
+              [displayEmpty]="displayEmpty"
+              [copyToClipboardAction]="copyToClipboardAction"
+              [useChipsForMultiValueProperty]="useChipsForMultiValueProperty"
+              [multiValueSeparator]="multiValueSeparator">
+          </adf-card-view>
+          <!-- Add Tags and Categories only to the folder panel -->
+          <adf-tag-node-actions-list *ngIf="group.name === 'cm:folder'" [nodeId]="node.id"> </adf-tag-node-actions-list>
+          <cast-cat-node-actions-list *ngIf="group.name === 'cm:folder'" [node]="node"> </cast-cat-node-actions-list>
+      </mat-expansion-panel>
+
+  </div>
+</ng-container>
+
