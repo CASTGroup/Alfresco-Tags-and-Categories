@@ -32,7 +32,7 @@ The component during ngOnInit dispatch an Action to load all the [repository Cat
 For Category management we found nothing and you can't save them with the [classic PUT to update the node](https://api-explorer.alfresco.com/api-explorer/#/nodes/updateNode) because, if you read the documentation, "**Note**: setting properties of type d:content and d:category are not supported".
 So we have developed a Webscript that need to be copied in the Data Dictionary\Webscript folder and an Angular component to use it.
 
-You can find the folder "update-categories" in the [_cast](https://github.com/CASTGroup/Alfresco-Tags-and-Categories/tree/main/_cast) directory.
+You can find the folder "update-categories" in the [_cast](https://github.com/CASTGroup/Alfresco-Tags-and-Categories/tree/main/_cast) directory. You have to copy in your Data Dictionary\Webscript folder.
 
 ## Who we are
 
